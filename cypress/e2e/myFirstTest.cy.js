@@ -1,6 +1,6 @@
 describe('My First Test', () => {
     it('Open Google', () => {
-        cy.visit("https://www.google.com/")
+        cy.visit("https://demo.automationtesting.in/Register.html")
         cy.title().should('eq','Google')
     })
   })
