@@ -5,6 +5,7 @@
       cy.get('[placeholder="Password"]').type("secret_sauce")
       cy.get('#login-button').click()
       cy.get('.title').contains("Products")
+      cy
     })
   })
 
