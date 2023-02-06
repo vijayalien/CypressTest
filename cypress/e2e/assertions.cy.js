@@ -35,14 +35,21 @@ describe('Assertions', () => {
           let actName = x.text()
           //BDD Style
           expect(actName).to.equal(expName)
-          expect(actName).to.not.equals(expName)
+          //expect(actName).to.not.equals(expName)
           expect(actName).to.not.null
 
 
           //TDD Style
           assert.equal(expName,actName)
-          assert.notEqual(expName,actName)
+          //assert.notEqual(expName,actName)
+          assert.isNotEmpty(actName,"Value is empty")
+          
           } )
+
+       cy.get('.oxd-userdropdown-tab').click()
+       cy.xpath("//a[contains(text(),'About')]").click()
+       cy.xpath("//div[@class='oxd-grid-2 orangehrm-about']").should;('contain','OrangeHRM')   
+       cy.xpath("//button[@class='oxd-dialog-close-button oxd-dialog-close-button-position']").click()
 
     })
 
