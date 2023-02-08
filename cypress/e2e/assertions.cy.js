@@ -98,8 +98,6 @@ describe('Tabs Assertions', () => {
       cy.xpath("(//span[@class='oxd-text oxd-text--span oxd-main-menu-item--name'])[7]").click()
       cy.get('.oxd-topbar-header-breadcrumb').should('contain','Performance')
 
- 
-
       
     })
 
