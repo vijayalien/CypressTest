@@ -38,6 +38,13 @@ describe('Check UI ELements', () => {
 
         cy.get(".form-check-input[type='checkbox']") .uncheck().should("not.be.checked")
 
+
+        //select first checkbox
+        cy.get(".form-check-input[type='checkbox']") .first().check()
+
+        //selecting last checkbox
+        cy.get(".form-check-input[type='checkbox']") .last().check()
+
       })
   })
 
