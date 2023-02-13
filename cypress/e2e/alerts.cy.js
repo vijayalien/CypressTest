@@ -1,6 +1,3 @@
-require('cypress-xpath')
-
-
 describe('Handle Alerts', () => {
 
     //1)Java script alert it will have some text and an 'OK' button
