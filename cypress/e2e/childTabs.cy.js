@@ -1,5 +1,3 @@
-require('cypress-xpath')
-
 describe('Handle Multiple Tabs', () => {
 
     //1)Java script alert it will have some text and an 'OK' button

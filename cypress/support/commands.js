@@ -26,3 +26,10 @@
 
 /// <reference types="Cypress" />
 ///  <reference types="cypress-xpath" />
+
+Cypress.Commands.add('getIFrame',(iFrameLocator)=>{
+cy.get(iFrameLocator)
+      .its('0.contentDocument.body')
+      .should('be.visible')
+      .then(cy.wrap)
+})
