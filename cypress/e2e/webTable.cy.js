@@ -54,7 +54,7 @@ describe('Handling Tables', () => {
         })
   
         let loopPages=5
-        for(let p=1 ;p<5;p++){
+        for(let p=1 ;p<5;p++){  
             if(loopPages>1){
                 cy.log("Active page number is ===" +p)
                 cy.get(".pagination>li:nth-child("+p+")").click()

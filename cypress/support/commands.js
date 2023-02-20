@@ -28,7 +28,7 @@
 ///  <reference types="cypress-xpath" />
 
 Cypress.Commands.add('getIFrame',(iFrameLocator)=>{
-cy.get(iFrameLocator)
+return cy.get(iFrameLocator)
       .its('0.contentDocument.body')
       .should('be.visible')
       .then(cy.wrap)
