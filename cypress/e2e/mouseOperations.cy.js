@@ -29,7 +29,7 @@ describe('Performing mouse actions', () => {
     })
 
       
-    it.only('Drag and Drop using plugin', () => {
+    it('Drag and Drop using plugin', () => {
         cy.visit('https://demo.automationtesting.in/Static.html')
 
         cy.wait(10000)
@@ -37,5 +37,11 @@ describe('Performing mouse actions', () => {
   
     })
 
+    it.only('Scroll Page', () => {
+        cy.visit('https://www.worldometers.info/geography/flags-of-the-world/')
+
+        cy.get(':nth-child(79) > [align="center"] > div').scrollIntoView({duration:2000})
+  
+    })
       
 })
