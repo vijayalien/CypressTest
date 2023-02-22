@@ -6,7 +6,6 @@ describe('Handling file uploads', () => {
         cy.get('#file-upload').attachFile('Test Cypress.txt')
         cy.get('#file-submit').click()
         cy.wait(5000)
-
         cy.get('.example > h3').should('have.text',"File Uploaded!")
 
     })
@@ -19,7 +18,6 @@ describe('Handling file uploads', () => {
 
         cy.get('.example > h3').should('have.text',"File Uploaded!")
         
-
     })
 
     
@@ -27,7 +25,6 @@ describe('Handling file uploads', () => {
         cy.visit('https://the-internet.herokuapp.com/upload')
         cy.get(' #drag-drop-upload').attachFile("Test Cypress.txt",{subjectType:'drag-n-drop'})
             
-
     })
 
     
@@ -36,7 +33,6 @@ describe('Handling file uploads', () => {
         
         cy.get('#filesToUpload').attachFile(["Test Cypress.txt", "TestWordDoc.docx"])
         cy.wait(5000)
-
         cy.get(':nth-child(6) > strong').should("contain.text","Files You Selected")
     })
 
@@ -48,7 +44,7 @@ describe('Handling file uploads', () => {
         cy.wait(5000)
 
         cy.get('.smart-item-name',{includeShadowDom:true}).should('contain.text','Test Cypress')
-        
+
     })
 
 })
