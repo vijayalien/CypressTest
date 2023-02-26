@@ -42,7 +42,6 @@ describe('Handle Alerts', () => {
 
         //alert window will automatically close the alert window
         cy.get('p#result').should('have.text','You clicked: Cancel')
-  
         
     })
 
@@ -59,7 +58,7 @@ describe('Handle Alerts', () => {
 
         cy.on('window:',(t) =>{
           expect(t).to.contain('I am a JS prompt')
-          
+        
         })
         //alert window will automatically close the alert window
         cy.get('p#result').should('have.text','You entered: welcome')
@@ -73,5 +72,4 @@ describe('Handle Alerts', () => {
         cy.get('.example').should('contain','Congratulations')
     })
     
-
 })

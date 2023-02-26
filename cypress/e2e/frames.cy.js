@@ -31,6 +31,5 @@ describe('Handle Frames', () => {
        cy.getIFrame('#mce_0_ifr').clear().type("Welcome {cmd+a}")
        cy.get("button[title='Italic']").click()
 
-
       })
 })

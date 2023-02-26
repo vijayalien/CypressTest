@@ -9,7 +9,6 @@ describe('Handle Multiple Tabs', () => {
       cy.wait(5000)
 
       cy.go('back')
-
     })
 
     it('Child Tab Approach 2', () => {
