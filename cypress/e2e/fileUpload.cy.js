@@ -7,7 +7,6 @@ describe('Handling file uploads', () => {
         cy.get('#file-submit').click()
         cy.wait(5000)
         cy.get('.example > h3').should('have.text',"File Uploaded!")
-
     })
 
     it('File upload - Rename', () => {
