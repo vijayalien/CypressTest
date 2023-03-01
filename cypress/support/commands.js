@@ -27,9 +27,39 @@
 /// <reference types="Cypress" />
 ///  <reference types="cypress-xpath" />
 
-Cypress.Commands.add('getIFrame',(iFrameLocator)=>{
-return cy.get(iFrameLocator)
-      .its('0.contentDocument.body')
-      .should('be.visible')
-      .then(cy.wrap)
+Cypress.Commands.add('getIFrame', (iFrameLocator) => {
+      return cy.get(iFrameLocator)
+            .its('0.contentDocument.body')
+            .should('be.visible')
+            .then(cy.wrap)
+})
+
+//Custom command for clicking on the link of the label
+
+Cypress.Commands.add('clickLink', (label) => {
+      cy.get('a').contains(label).click()
+})
+
+//Over write command
+
+// Cypress.Commands.overwrite('contains',(originalFn, subject, filter, text, options = {}) => {
+
+//       if (typeof text == 'object') {
+//             options =text
+//             text=filter
+//             filter=undefined
+//       }
+
+//       options.matchCase =false
+//       return originalFn(subject,filter,text,options)
+// })
+
+
+//Custom command for login
+
+Cypress.Commands.add('LoginApp',(email,password)=>{
+      cy.get('#Email').type(email)
+      cy.get('#Password').type(password)
+      cy.get('.button-1.login-button').click()
+
 })
