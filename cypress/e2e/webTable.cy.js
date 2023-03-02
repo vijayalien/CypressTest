@@ -13,7 +13,6 @@ describe('Handling Tables', () => {
 
     })
 
-    
     it('Check number rows and columns', () => {
     
       cy.get("table[class='table table-bordered table-hover']>tbody>tr").should('have.length','10')

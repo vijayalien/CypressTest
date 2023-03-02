@@ -37,7 +37,6 @@ describe('Handle Alerts', () => {
           expect(t).to.contain('I am a JS Confirm')
           
         })
-
         cy.on('window:confirm',() => false)
 
         //alert window will automatically close the alert window
@@ -49,7 +48,6 @@ describe('Handle Alerts', () => {
     it('Javascript prompt alerts', () => {
         cy.visit('https://the-internet.herokuapp.com/javascript_alerts')
   
-        
         cy.window().then((win)=>{
         cy.stub(win,'prompt').returns('welcome')
 
@@ -71,5 +69,4 @@ describe('Handle Alerts', () => {
   
         cy.get('.example').should('contain','Congratulations')
     })
-    
 })
