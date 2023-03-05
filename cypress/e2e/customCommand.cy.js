@@ -23,5 +23,4 @@ describe('Custom Commands', () => {
         cy.get('.ico-account').should('have.text','My account')
 
     })
-
 })
