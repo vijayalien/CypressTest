@@ -10,7 +10,5 @@ describe('Page Object Model', () => {
         lp.setPassword("admin123")
         lp.clickSubmit()
         lp.verifyLogin()
-
-
     })
 })
